@@ -1,0 +1,11 @@
+extends layout 
+
+block content 
+    h1= newMessageHeader
+    
+    form(method="POST" action="/new")
+        label(for="messageAuthor") Name
+        input(name="messageAuthor" id="messageAuthor")
+        label(for="messageText") Message
+        input(name="messageText" id="messageText")
+        button(type="submit") Send Message
