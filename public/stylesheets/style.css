@@ -1,8 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f7f7f7;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+.title-header {
+  color: #9883e5;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  flex-basis: 90%;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.message {
+  box-shadow: 1px 1px 1px 1px #c6c3c3;
+  padding: 0 20px;
+  flex-basis: 150px;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-message-header {
+  font-size: 3rem;
+  color: #e76f51;
+}
+
+.new-message-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 50px;
+  border-radius: 10px;
+}
+
+.new-message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message-form-div {
+  display: flex;
+}
+
+.new-message-container > * {
+  margin: 10px 0 0 20px;
+  padding: 10px 0 0 20px;
+}
+
+.new-message-form > label {
+  /* color: #fff; */
+  font-size: 1.3rem;
 }
