@@ -1,11 +1,14 @@
 extends layout 
 
 block content 
-    h1= newMessageHeader
+
+    .new-message-container
+        h1(class="new-message-header")= newMessageHeader
     
-    form(method="POST" action="/new")
-        label(for="messageAuthor") Name
-        input(name="messageAuthor" id="messageAuthor")
-        label(for="messageText") Message
-        input(name="messageText" id="messageText")
-        button(type="submit") Send Message
+        .message-form-div
+            form(method="POST" action="/new" class="new-message-form")
+                label(for="messageAuthor") Name
+                input(name="messageAuthor" id="messageAuthor")
+                label(for="messageText") Message
+                input(name="messageText" id="messageText")
+                button(type="submit") Send Message

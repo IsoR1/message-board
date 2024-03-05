@@ -1,9 +1,13 @@
 extends layout
 
 block content
-  h1= title 
-  each msg in messages
-    .message
-      h1= msg.user
-      p= msg.text 
-      p= msg.added
+  .index-container 
+    .header-div
+      h1(class="title-header")= title 
+      a(href="/new") New Message
+    .messages-container
+      each msg in messages
+        .message
+          h1= msg.text
+          p= msg.user 
+          p= msg.added.toLocaleDateString("en-US")
